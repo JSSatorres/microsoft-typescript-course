@@ -14,3 +14,21 @@ const lenguages4: Array<string | number> = []
 lenguages4.push('spanish')
 lenguages4.push(1)
 
+// Tuples 1
+type CellValue = 'X' | '0' | ''
+type GameBoard = [
+  [CellValue, CellValue, CellValue],
+  [CellValue, CellValue, CellValue],
+  [CellValue, CellValue, CellValue]
+]
+
+const gameBoard: GameBoard = [
+  ['X', '0', 'X'],
+  ['0', 'X', '0'],
+  ['X', '', '0']
+]
+
+// Tuples 2
+type RGB = [number, number, number]
+
+const rgb: RGB = [255, 255, 255]
