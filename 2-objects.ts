@@ -34,3 +34,26 @@ function createNewHero(hero: NewHero): NewHero {
   }
 }
 
+// Type indexing - Reuse some parts of a type
+type HeroProperties = {
+  isActive: boolean
+  address: {
+      planet: string
+      city: string
+  }
+}
+
+const addressHero: HeroProperties['address'] = {
+  planet: 'Earth',
+  city: 'Madrid'
+}
+
+// Type from function return
+function createAddress() {
+  return {
+    planet: 'Earth',
+    city: 'Madrid'
+  }
+}
+
+type Address = ReturnType<typeof createAddress>
