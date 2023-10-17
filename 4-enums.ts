@@ -14,3 +14,20 @@ function showMessage (errorType) {
     console.log('🤍')
   }
 }
+
+// TypeScript
+enum NEW_ERROR_TYPES {
+  NOT_FOUND, // 0
+  UNAUTHORIZED, // 1
+  FORBIDDEN // 2
+}
+
+function newShowMessage (errorType: NEW_ERROR_TYPES) {
+  if (errorType === NEW_ERROR_TYPES.NOT_FOUND) {
+    console.log('🩷')
+  } else if (errorType === NEW_ERROR_TYPES.UNAUTHORIZED) {
+    console.log('🩵')
+  } else if (errorType === NEW_ERROR_TYPES.FORBIDDEN) {
+    console.log('🤍')
+  }
+}
