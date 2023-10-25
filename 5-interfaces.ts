@@ -5,3 +5,10 @@ interface Person {
   greeting: () => void
 }
 
+let person: Person = {
+  name: 'Thor',
+  age: 1500,
+  greeting: () => {
+    console.log('Hi')
+  }
+}
