@@ -14,13 +14,13 @@ displayLength('1')
 
 // Example 2
 interface Mario {
-  company: string,
+  company: 'Nintendo',
   name: string,
   jump: () => void
 }
 
 interface Sonic {
-  company: string,
+  company: 'Sega',
   name: string,
   run: () => void
 }
@@ -28,7 +28,13 @@ interface Sonic {
 type Character = Mario | Sonic
 
 function play(character: Character) {
-  // console.log(character.run()) -> Error because TS think it could be company or name (mix between both)
-  // Idea 1: Change in Mario interface company: string by company 'Nintendo' and
-  // ask if (character.company === 'Nintendo') { console.log(character.jump()) }
+
+  if (character.company === 'Nintendo') {
+    character.jump()
+    return
+  }
+  //in this point the character only can be Sonic
+  character.run()
+
+
 }
